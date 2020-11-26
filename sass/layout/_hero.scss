@@ -7,8 +7,15 @@
     grid-template-rows: 1fr 1fr;
 
     @include respond(tab-land) {
+        margin: 3rem;
+        height: calc(100vh - 6rem);
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 40% 60%;
+    }
+
+    @include respond(phone) {
+        margin: 1.5rem;
+        height: calc(100vh - 3rem);
     }
 
     &__col {

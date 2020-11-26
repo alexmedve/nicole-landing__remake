@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    z-index: 100;
 
     &__link {
         &,
@@ -16,12 +17,13 @@
         &:link {
             text-decoration: none;
             color: $color-grey-dark-1;
-            z-index: 1;
+            z-index: 100;
         }
     }
 
     &__title {
         font-size: 2rem;
+        z-index: 100;
     }
 
     &__mask {
@@ -31,7 +33,7 @@
         top: 0;
         left: 0;
         background-color: $color-white;
-        z-index: 0;
+        z-index: 90;
     }
 
     &__checkbox {
@@ -43,7 +45,7 @@
         height: 3rem;
         width: 3.5rem;
         cursor: pointer;
-        z-index: 1;
+        z-index: 100;
     }
 
     &__icon {
@@ -92,10 +94,10 @@
 
     &__nav {
         position: fixed;
-        top: -55vh;
+        top: -45vh;
         left: 0;
-        z-index: -1;
-        height: 60vh;
+        z-index: 80;
+        height: 50vh;
         width: 100%;
         background-color: $color-white;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
