@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html,
+body {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    position: relative;
+    background-image: url('../assets/background-video.mp4');
+}
+
+.background-video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .1;
+}

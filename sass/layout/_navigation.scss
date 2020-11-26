@@ -1,0 +1,117 @@
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $color-white;
+    height: 8rem;
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    &__link {
+        &,
+        &:visited,
+        &:link {
+            text-decoration: none;
+            color: $color-grey-dark-1;
+            z-index: 1;
+        }
+    }
+
+    &__title {
+        font-size: 2rem;
+    }
+
+    &__mask {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: $color-white;
+        z-index: 0;
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        text-align: center;
+        height: 3rem;
+        width: 3.5rem;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: 1.3rem;
+
+        &,
+        &::before,
+        &::after {
+            display: inline-block;
+            width: 3rem;
+            height: 3px;
+            background-color: $color-grey-dark-1;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all $default-animation-duration;
+        }
+
+        &::before {
+            top: -.8rem;
+        }
+
+        &::after {
+            top: .8rem;
+        }
+    }
+
+    &__checkbox:checked~&__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked~&__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked~&__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+
+    &__nav {
+        position: fixed;
+        top: -55vh;
+        left: 0;
+        z-index: -1;
+        height: 60vh;
+        width: 100%;
+        background-color: $color-white;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+        transition: all $long-animation-duration;
+    }
+
+    &__checkbox:checked~&__nav {
+        top: 0;
+    }
+
+    &__list {
+        text-align: center;
+        margin-top: 16vh;
+    }
+
+    &__item {
+        margin: 3rem 0;
+    }
+}

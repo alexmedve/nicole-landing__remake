@@ -1,0 +1,37 @@
+.personal-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-rows: 35rem;
+    grid-auto-rows: 35rem;
+    grid-gap: 2rem;
+}
+
+.personal-item {
+    background-color: aquamarine;
+
+    &__image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &--11 {
+        grid-row: 1 / span 2;
+        grid-column: 3 / span 2;
+    }
+
+    &--24 {
+        grid-row: 8;
+        grid-column: 1 / span 2;
+    }
+
+    &--30 {
+        grid-row: 5 / span 2;
+        grid-column: 2 / span 2;
+    }
+
+    &--38 {
+        grid-row: 3;
+        grid-column: 1 / span 3;
+    }
+}

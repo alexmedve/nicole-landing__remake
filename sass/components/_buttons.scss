@@ -1,0 +1,40 @@
+.btn {
+
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 2.4rem;
+        letter-spacing: 2px;
+        padding: 1rem 2rem;
+        color: $color-white;
+        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+        background-size: 250%;
+        transition: all $default-animation-duration;
+
+        @include respond(phone) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &:hover,
+    &:active {
+        background-position: 100%;
+        color: $color-black;
+    }
+
+    &--dark {
+        &,
+        &:visited,
+        &:link {
+            color: $color-grey-dark-1;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-grey-dark-1 50%);
+        }
+
+        &:hover,
+        &:active {
+            color: $color-white;
+        }
+    }
+}
