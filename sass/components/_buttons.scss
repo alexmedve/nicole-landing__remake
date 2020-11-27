@@ -13,6 +13,7 @@
         background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
         background-size: 250%;
         transition: all $default-animation-duration;
+        backface-visibility: hidden;
 
         @include respond(phone) {
             font-size: 1.8rem;
