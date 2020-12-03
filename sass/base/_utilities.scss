@@ -5,3 +5,15 @@
 .u-margin-bottom-small {
     margin-top: 1rem;
 }
+
+.u-opacity-in {
+    animation-name: opacity-in;
+    animation-duration: $default-animation-duration;
+    animation-fill-mode: forwards;
+}
+
+.u-opacity-out {
+    animation-name: opacity-out;
+    animation-duration: $default-animation-duration;
+    animation-fill-mode: forwards;
+}

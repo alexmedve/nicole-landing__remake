@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Saira:wght@200;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>Nicole McLaughlin</title>
@@ -37,8 +38,37 @@
         </nav>
     </div>
     <main class="container">
-        
+        <div class="about">
+            <section class="about-section" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="heading-2">
+                    Nicole McLaughlin
+                </h2>
+                <div class="about-section__image">
+                    <img src="./assets/img/about/about-1.jpg" alt="Nicole McLaughlin">
+                </div>
+            </section>
+            <section class="about-section" data-aos="fade-up" data-aos-delay="100">
+                <div class="about-section__image">
+                    <img src="./assets/img/about/about-2.jpg" alt="Nicole McLaughlin">
+                </div>
+                <p class="paragraph">
+                    Taking a tongue-in-cheek approach to her creative process, Nicole has transformed old
+                    volleyballs
+                    into slippers, camera bags into bralettes, and crafted board shorts from packets of Haribo
+                    gummies.
+                    This unexpected translation of materials allows her to uniquely highlight the message of
+                    sustainability—a key element to her success in changing the perception around waste and
+                    sustainable
+                    design.
+                </p>
+            </section>
+        </div>
     </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- <script src="./js/about.js"></script> -->
 </body>
 
 </html>
