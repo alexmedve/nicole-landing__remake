@@ -1,16 +1,11 @@
-const image1 = document.querySelector(".about__hero-images__image--1");
+const showcase = document.getElementById("showcase");
 
-image1.classList.add("u-opacity-in");
+let showcaseStep = 1;
 
 setInterval(() => {
-    image1.classList.add("u-opacity-in");
-    setTimeout(() => {
-        image1.classList.remove("u-opacity-out");
-    }, 700);
-    setTimeout(() => {
-        image1.classList.add("u-opacity-out");
-    }, 2300);
-    setTimeout(() => {
-        image1.classList.add("u-opacity-out");
-    }, 3000);
-}, 4000);
+    if(showcaseStep === 4)
+        showcaseStep = 1;
+    else
+        showcaseStep++;
+    showcase.src = `./assets/img/about/showcase-${showcaseStep}.jpeg`;
+}, 1300);

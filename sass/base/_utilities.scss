@@ -6,6 +6,22 @@
     margin-top: 1rem;
 }
 
+.u-margin-right {
+    margin-right: 5rem;
+
+    @include respond(tab-port) {
+        margin-right: 0;
+    }
+}
+
+.u-margin-left {
+    margin-left: 5rem;
+    
+    @include respond(tab-port) {
+        margin-left: 0;
+    }
+}
+
 .u-opacity-in {
     animation-name: opacity-in;
     animation-duration: $default-animation-duration;
